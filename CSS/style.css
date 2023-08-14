@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 /********navbar********/
 .navbar{
     background-color: #f44336;
@@ -14,6 +18,29 @@
     overflow: hidden;
     position: fixed;
     width: 100%;
+    display: flex;
+}
+
+.btn{
+    border: none;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #f44336;
+    margin-left: auto;
+    display: none;
+}
+
+.navbar i{
+    color: white;
+    text-decoration: none;
+    Font-size: 18px;
+    Font-weight: 400;
+    text-decoration: none;
+}
+
+.navbar i:active , button:active{
+    color: #f44336;
+    background-color: white;
 }
 
 .active{
@@ -35,11 +62,34 @@
     color: #f44336 !important;
 }
 
+.nav-link1{
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    width: 100%;
+    padding: 12px 24px!important;
+    background-color: white;
+    color: black !important;
+    text-decoration: none;
+}
+
 .active:hover{
     background-color: #ccc;
     color: black !important;
 }
 
+.div{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 54px;
+    z-index: 1;
+    display: none;
+}
 /********header********/
 header{
     padding: 128px 16px;
@@ -143,4 +193,26 @@ footer i{
     Line-height: 24px;
     color: #666666;
 }
-/********navbar********/
+/********media********/
+@media screen and (max-width: 425px) {
+  .navbar div{
+    display: none;
+  }
+  .btn{
+    display: block;
+  }
+  .header-title{
+    font-size: 50px;
+  }
+   main{
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  aside{
+    width: 100%;
+  }
+  .p1 , .p2 , .title{
+    margin: 1rem;
+  }
+}
